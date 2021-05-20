@@ -16,18 +16,20 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/AudioKit/STK", .branch("main")),
         .package(url: "https://github.com/AudioKit/AudioKit", .branch("develop")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
+        .target(name: "Stk",
+                exclude: ["LICENSE"],
+                resources: [.copy("rawwaves")]),
         .target(
             name: "STKAudioKit",
-            dependencies: ["AudioKit", "CSTKAudioKit", "STK"]),
+            dependencies: ["AudioKit", "CSTKAudioKit", "Stk"]),
         .target(
             name: "CSTKAudioKit",
-            dependencies: ["AudioKit", "STK"]),
+            dependencies: ["AudioKit", "Stk"]),
         .testTarget(
             name: "STKAudioKitTests",
             dependencies: ["STKAudioKit"]),
