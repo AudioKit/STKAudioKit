@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "STKAudioKit",
+    platforms: [
+        .macOS(.v10_14), .iOS(.v11), .tvOS(.v11)
+    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -22,8 +25,12 @@ let package = Package(
         .target(
             name: "STKAudioKit",
             dependencies: ["AudioKit", "STK"]),
+        .target(
+            name: "CSTKAudioKit",
+            dependencies: ["AudioKit", "STK"]),
         .testTarget(
             name: "STKAudioKitTests",
             dependencies: ["STKAudioKit"]),
-    ]
+    ],
+    cxxLanguageStandard: .cxx14
 )
