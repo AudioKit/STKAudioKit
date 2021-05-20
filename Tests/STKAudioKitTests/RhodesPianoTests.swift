@@ -3,6 +3,7 @@
 
 import AudioKit
 import XCTest
+import STKAudioKit
 
 class RhodesPianoKeyTests: XCTestCase {
 

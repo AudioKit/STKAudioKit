@@ -38,7 +38,7 @@ void STKInstrumentDSP::handleMIDIEvent(AUMIDIEvent const& midiEvent) {
     }
 }
 
-void STKInstrumentDSP::process2(FrameRange range) {
+void STKInstrumentDSP::process(FrameRange range) {
     auto instr = getInstrument();
 
     for (int i : range) {

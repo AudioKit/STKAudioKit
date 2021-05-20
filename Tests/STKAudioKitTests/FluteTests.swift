@@ -2,6 +2,7 @@
 #if !os(tvOS)
 
 import AudioKit
+import STKAudioKit
 import XCTest
 
 class FluteTests: XCTestCase {

@@ -18,6 +18,6 @@ public:
 
     void handleMIDIEvent(AUMIDIEvent const& midiEvent) override;
 
-    void process2(FrameRange range) override;
+    void process(FrameRange range) override;
 
 };
