@@ -19,8 +19,7 @@ jobs:
       - name: Build STKAudioKit
         run: |
           set -euo pipefail
-          swift package clean
-          swift build --sanitize="address"
+          xcodebuild -scheme STKAudioKit -enableAddressSanitizer YES clean build | xcpretty
       - name: Run Tests (ASAN)
         run: |
           set -euo pipefail
