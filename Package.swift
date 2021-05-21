@@ -23,7 +23,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(name: "Stk",
                 exclude: ["LICENSE"],
-                resources: [.copy("rawwaves")]),
+                resources: [.copy("rawwaves")],
+                publicHeadersPath: "include"),
         .target(
             name: "STKAudioKit",
             dependencies: ["AudioKit", "CSTKAudioKit", "Stk"]),
