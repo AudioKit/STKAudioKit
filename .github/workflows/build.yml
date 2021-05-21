@@ -24,7 +24,7 @@ jobs:
       - name: Run Tests (ASAN)
         run: |
           set -euo pipefail
-          xcodebuild -scheme STKAudioKit -enableAddressSanitizer YES test | xcpretty
+          swift test --sanitize="address"
 
   # Generate Wiki docs on release
   docs:
