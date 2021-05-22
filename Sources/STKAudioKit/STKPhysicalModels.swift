@@ -2,6 +2,7 @@
 
 import AVFoundation
 import AudioKit
+import AudioKitEX
 
 /// Superclass for STK physical models, do not use directly
 public class STKBase: Node, MIDITriggerable  {
