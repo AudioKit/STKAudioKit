@@ -3,7 +3,7 @@
 
 import XCTest
 import AudioKit
-import CAudioKit
+import CAudioKitEX
 import STKAudioKit
 
 class ShakerTests: XCTestCase {
