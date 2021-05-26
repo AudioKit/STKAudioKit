@@ -1,4 +1,4 @@
-# STKAudioKit
+# STK AudioKit
 
 [![Build Status](https://github.com/AudioKit/STKAudioKit/workflows/CI/badge.svg)](https://github.com/AudioKit/STKAudioKit/actions?query=workflow%3ACI)
 [![License](https://img.shields.io/github/license/AudioKit/STKAudioKit)](https://github.com/AudioKit/STKAudioKit/blob/main/LICENSE)
