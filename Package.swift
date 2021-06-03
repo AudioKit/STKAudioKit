@@ -5,34 +5,14 @@ import PackageDescription
 
 let package = Package(
     name: "STKAudioKit",
-    platforms: [
-        .macOS(.v10_14), .iOS(.v13), .tvOS(.v13)
-    ],
-    products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(
-            name: "STKAudioKit",
-            targets: ["STKAudioKit"]),
-    ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/AudioKit/AudioKit", .branch("develop")),
-    ],
+    platforms: [.macOS(.v10_14), .iOS(.v13), .tvOS(.v13)],
+    products: [.library(name: "STKAudioKit", targets: ["STKAudioKit"])],
+    dependencies: [.package(url: "https://github.com/AudioKit/AudioKit", .branch("develop"))],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(name: "Stk",
-                exclude: ["LICENSE"],
-                resources: [.copy("rawwaves")]),
-        .target(
-            name: "STKAudioKit",
-            dependencies: ["AudioKit", "CSTKAudioKit", "Stk"]),
-        .target(
-            name: "CSTKAudioKit",
-            dependencies: ["AudioKit", "Stk"]),
-        .testTarget(
-            name: "STKAudioKitTests",
-            dependencies: ["STKAudioKit"]),
+        .target(name: "Stk", exclude: ["LICENSE"], resources: [.copy("rawwaves")]),
+        .target(name: "STKAudioKit", dependencies: ["AudioKit", "CSTKAudioKit", "Stk"]),
+        .target(name: "CSTKAudioKit", dependencies: ["AudioKit", "Stk"]),
+        .testTarget(name: "STKAudioKitTests", dependencies: ["STKAudioKit"]),
     ],
     cxxLanguageStandard: .cxx14
 )
