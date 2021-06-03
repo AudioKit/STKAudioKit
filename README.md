@@ -8,15 +8,21 @@
 
 This extension to AudioKit allows you to use physical models from Stanford's [Synthesis Toolkit (STK)](https://ccrma.stanford.edu/software/stk/).
 
-## Documentation
+## Installation via Swift Package Manager
 
-The Githbub [Wiki](https://github.com/AudioKit/STKAudioKit/wiki) hosts the documentation for this project.
+To add AudioKitUI to your Xcode project, select File -> Swift Packages -> Add Package Depedancy. Enter `https://github.com/AudioKit/STKAudioKit` for the URL. 
+
+## API Reference
+
+* [STKBase](https://github.com/AudioKit/AudioKitUI/wiki/STKBase) - Superclass for STK physical models, do not use directly
+* [Clarinet](https://github.com/AudioKit/AudioKitUI/wiki/Clarinet)
+* [Flute](https://github.com/AudioKit/AudioKitUI/wiki/Flute)
+* [Mandolin String](https://github.com/AudioKit/AudioKitUI/wiki/MandolinString)
+* [Rhodes Piano](https://github.com/AudioKit/AudioKitUI/wiki/RhodesPianoKey)
+* [Shaker](https://github.com/AudioKit/AudioKitUI/wiki/Shaker)
+* [Shaker Type](https://github.com/AudioKit/AudioKitUI/wiki/ShakerType)
+* [Tubular Bells](https://github.com/AudioKit/AudioKitUI/wiki/TubularBells)
 
 ## Examples
 
 See the [AudioKit Cookbook](https://github.com/AudioKit/Cookbook/) for examples.
-
-## Installation
-
-Point your Swift Package Manager to this URL.
-
