@@ -9,7 +9,7 @@
     // XXX: We would like to just use SWIFTPM_MODULE_BUNDLE but it breaks CI.
     //      Instead copy the code from the SPM-generated resource_bundle_accessor.m
 
-    NSString *bundleName = @"STKAudioKit_STK";
+    NSString *bundleName = @"STKAudioKit_Stk";
 
     NSArray<NSURL*> *candidates = @[
         NSBundle.mainBundle.resourceURL,
