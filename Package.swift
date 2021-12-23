@@ -7,11 +7,14 @@ let package = Package(
     name: "STKAudioKit",
     platforms: [.macOS(.v10_13), .iOS(.v11), .tvOS(.v11)],
     products: [.library(name: "STKAudioKit", targets: ["STKAudioKit"])],
-    dependencies: [.package(url: "https://github.com/AudioKit/AudioKit", from: "5.2.0")],
+    dependencies: [
+        .package(url: "https://github.com/AudioKit/AudioKit", from: "5.3.0"),
+        .package(url: "https://github.com/AudioKit/AudioKitEX", from: "5.3.0"),
+    ],
     targets: [
         .target(name: "Stk", exclude: ["LICENSE"], resources: [.copy("rawwaves")]),
-        .target(name: "STKAudioKit", dependencies: ["AudioKit", "CSTKAudioKit", "Stk"]),
-        .target(name: "CSTKAudioKit", dependencies: ["AudioKit", "Stk"]),
+        .target(name: "STKAudioKit", dependencies: ["AudioKit", "AudioKitEX", "CSTKAudioKit", "Stk"]),
+        .target(name: "CSTKAudioKit", dependencies: ["AudioKit", "AudioKitEX", "Stk"]),
         .testTarget(name: "STKAudioKitTests", dependencies: ["STKAudioKit"]),
     ],
     cxxLanguageStandard: .cxx14
