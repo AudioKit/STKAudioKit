@@ -41,7 +41,7 @@ public:
   //! Set the filter for a notch at the given frequency (Hz) and radius.
   void setNotch(StkFloat frequency, StkFloat radius);
 
-  //! Set the filter zero coefficients for contant resonance gain.
+  //! Set the filter zero coefficients for constant resonance gain.
   void setEqualGainZeroes(void) { filter_.setEqualGainZeroes(); };
 
   //! Initiate the envelope with a key-on event.

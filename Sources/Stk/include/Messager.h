@@ -105,7 +105,7 @@ public:
   bool setScoreFile(const char *filename);
 
 #if defined(__STK_REALTIME__)
-  //! Initiate the "realtime" retreival from stdin of control messages into the
+  //! Initiate the "realtime" retrieval from stdin of control messages into the
   //! queue.
   /*!
     This function initiates a thread for asynchronous retrieval of

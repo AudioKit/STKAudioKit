@@ -322,7 +322,7 @@ public:
           nativeFormats(0) {}
   };
 
-  //! The structure for specifying input or ouput stream parameters.
+  //! The structure for specifying input or output stream parameters.
   struct StreamParameters {
     unsigned int deviceId;  /*!< Device index (0 to getDeviceCount() - 1). */
     unsigned int nChannels; /*!< Number of channels. */

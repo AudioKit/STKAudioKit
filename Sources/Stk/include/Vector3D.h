@@ -36,7 +36,7 @@ public:
   //! Calculate the vector length.
   StkFloat getLength(void);
 
-  //! Set the X, Y, and Z values simultaniously.
+  //! Set the X, Y, and Z values simultaneously.
   void setXYZ(StkFloat x, StkFloat y, StkFloat z) {
     X_ = x;
     Y_ = y;

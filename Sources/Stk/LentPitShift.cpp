@@ -21,7 +21,7 @@ LentPitShift::LentPitShift(StkFloat periodRatio, int tMax)
       new StkFloat[2 * tMax_]; // Allocation of the array for the hamming window
   threshold_ = 0.1;            // Default threshold for pitch tracking
 
-  dt = new StkFloat[tMax + 1];    // Allocation of the euclidian distance
+  dt = new StkFloat[tMax + 1];    // Allocation of the euclidean distance
                                   // coefficient array.  The first one is never
                                   // used.
   cumDt = new StkFloat[tMax + 1]; // Allocation of the cumulative sum array
@@ -34,7 +34,7 @@ LentPitShift::LentPitShift(StkFloat periodRatio, int tMax)
 
   // Initialisation of the input and output delay lines
   inputLine_.setMaximumDelay(3 * tMax_);
-  // The delay is choosed such as the coefficients are not read before being
+  // The delay is chosen such as the coefficients are not read before being
   // finalised.
   outputLine_.setMaximumDelay(3 * tMax_);
   outputLine_.setDelay(3 * tMax_);

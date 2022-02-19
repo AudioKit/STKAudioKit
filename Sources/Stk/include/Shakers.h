@@ -42,7 +42,7 @@ namespace stk {
     - Little Rocks = 11
     - Next Mug = 12
     - Penny + Mug = 13
-    - Nickle + Mug = 14
+    - Nickel + Mug = 14
     - Dime + Mug = 15
     - Quarter + Mug = 16
     - Franc + Mug = 17
