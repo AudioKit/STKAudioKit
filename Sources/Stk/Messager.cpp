@@ -335,7 +335,7 @@ THREAD_RETURN THREAD_TYPE socketHandler(void *ptr) {
 
   while (data->sources & STK_SOCKET) {
 
-    // Use select function to periodically poll socket desriptors.
+    // Use select function to periodically poll socket descriptors.
     rmask = data->mask;
     timeout.tv_sec = 0;
     timeout.tv_usec = 50000; // 50 milliseconds
