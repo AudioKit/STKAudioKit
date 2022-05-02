@@ -751,7 +751,7 @@ void FileWrite ::closeMatFile(void) {
   // Write file size (minus some header info)
   fwrite(&headsize, 4, 1, fd_);
 
-  fseek(fd_, temp + 196, SEEK_SET); // jumpt to data size (in bytes)
+  fseek(fd_, temp + 196, SEEK_SET); // jump to data size (in bytes)
   temp = (SINT32)(frameCounter_ * 8 * channels_);
   fwrite(&temp, 4, 1, fd_);
 

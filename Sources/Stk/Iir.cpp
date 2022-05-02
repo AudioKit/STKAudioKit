@@ -12,7 +12,7 @@
     a[0]*y[n] = b[0]*x[n] + ... + b[nb]*x[n-nb] -
                 a[1]*y[n-1] - ... - a[na]*y[n-na]
 
-    If a[0] is not equal to 1, the filter coeffcients are normalized
+    If a[0] is not equal to 1, the filter coefficients are normalized
     by a[0].
 
     The \e gain parameter is applied at the filter input and does not

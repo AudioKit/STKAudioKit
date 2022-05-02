@@ -17,8 +17,8 @@
         NSBundle.mainBundle.bundleURL
     ];
 
-    for (NSURL* candiate in candidates) {
-        NSURL *bundlePath = [candiate URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.bundle", bundleName]];
+    for (NSURL* candidate in candidates) {
+        NSURL *bundlePath = [candidate URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.bundle", bundleName]];
 
         NSBundle *bundle = [NSBundle bundleWithURL:bundlePath];
         if (bundle != nil) {

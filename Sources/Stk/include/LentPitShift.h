@@ -91,7 +91,7 @@ protected:
 
   StkFloat threshold_;       // Threshold of detection for the pitch tracker
   unsigned long lastPeriod_; // Result of the last pitch tracking loop
-  StkFloat *dt; // Array containing the euclidian distance coefficients
+  StkFloat *dt; // Array containing the euclidean distance coefficients
   StkFloat
       *cumDt; // Array containing the cumulative sum of the coefficients in dt
   StkFloat *dpt; // Array containing the pitch tracking function coefficients

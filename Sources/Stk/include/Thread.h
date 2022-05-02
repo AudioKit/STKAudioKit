@@ -33,7 +33,7 @@ namespace stk {
     Windows, the C runtime threadex functions are used.
 
     Each instance of the Thread class can be used to control a single
-    thread process.  Routines are provided to signal cancelation
+    thread process.  Routines are provided to signal cancellation
     and/or joining with a thread, though it is not possible for this
     class to know the running status of a thread once it is started.
 

@@ -30,7 +30,7 @@ public class Flute: STKBase {
     public init() { super.init("flut")}
 }
 
-/// STK Mandole
+/// STK Mandolin
 public class MandolinString: STKBase {
     /// Initialize the physical model
     public init() { super.init("mand")}
@@ -48,7 +48,7 @@ public class Shaker: STKBase {
     public init() { super.init("shak")}
 }
 
-/// STK Tubuluar Bells
+/// STK Tubular Bells
 public class TubularBells: STKBase {
     /// Initialize the physical model
     public init() { super.init("tbel")}
@@ -111,8 +111,8 @@ public enum ShakerType: MIDIByte {
     /// A penny rattling around a mug
     case pennyInMug = 13
 
-    /// A nickle rattling around a mug
-    case nickleInMug = 14
+    /// A nickel rattling around a mug
+    case nickelInMug = 14
 
     /// A dime rattling around a mug
     case dimeInMug = 15

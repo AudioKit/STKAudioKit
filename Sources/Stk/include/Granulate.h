@@ -62,7 +62,7 @@ public:
   /*!
     Granular synthesis allows for time-stetching without affecting
     the original pitch of a sound.  A stretch factor of 4 will produce
-    a resulting sound of length 4 times the orignal sound.  The
+    a resulting sound of length 4 times the original sound.  The
     default parameter of 1 produces no stretching.
   */
   void setStretch(unsigned int stretchFactor = 1);

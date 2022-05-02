@@ -19,7 +19,7 @@ namespace stk {
     a[0]*y[n] = b[0]*x[n] + ... + b[nb]*x[n-nb] -
                 a[1]*y[n-1] - ... - a[na]*y[n-na]
 
-    If a[0] is not equal to 1, the filter coeffcients are normalized
+    If a[0] is not equal to 1, the filter coefficients are normalized
     by a[0].
 
     The \e gain parameter is applied at the filter input and does not
@@ -51,7 +51,7 @@ public:
   /*!
     An StkError can be thrown if either of the coefficient vector
     sizes is zero, or if the a[0] coefficient is equal to zero.  If
-    a[0] is not equal to 1, the filter coeffcients are normalized by
+    a[0] is not equal to 1, the filter coefficients are normalized by
     a[0].  The internal state of the filter is not cleared unless the
     \e clearState flag is \c true.
   */
@@ -75,7 +75,7 @@ public:
     An StkError can be thrown if the coefficient vector is empty or
     if the a[0] coefficient is equal to zero.  Previously set
     numerator coefficients are unaffected unless a[0] is not equal to
-    1, in which case all coeffcients are normalized by a[0].  Note
+    1, in which case all coefficients are normalized by a[0].  Note
     that the default constructor sets the single numerator coefficient
     b[0] to 1.0.  The internal state of the filter is not cleared
     unless the \e clearState flag is \c true.
