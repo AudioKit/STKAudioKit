@@ -27,6 +27,7 @@
 #include "SKINItbl.h"
 #include <cstdlib>
 #include <sstream>
+#include <stdlib.h>
 
 namespace stk {
 
