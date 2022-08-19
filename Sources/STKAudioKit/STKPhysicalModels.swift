@@ -1,17 +1,17 @@
 // Copyright AudioKit. All Rights Reserved.
 
-import AVFoundation
 import AudioKit
 import AudioKitEX
+import AVFoundation
 
 /// Superclass for STK physical models, do not use directly
-public class STKBase: Node, MIDITriggerable  {
+public class STKBase: Node, MIDITriggerable {
     /// Connected nodes
     public var connections: [Node] { [] }
-    
+
     /// Underlying AVAudioNode
     public var avAudioNode: AVAudioNode
-    
+
     /// Initialize the STK Clarinet model
     public init(_ code: String) {
         avAudioNode = instantiate(instrument: code)
@@ -21,46 +21,46 @@ public class STKBase: Node, MIDITriggerable  {
 /// STK Clarinet
 public class Clarinet: STKBase {
     /// Initialize the physical model
-    public init() { super.init("clar")}
+    public init() { super.init("clar") }
 }
 
 /// STK Flute
 public class Flute: STKBase {
     /// Initialize the physical model
-    public init() { super.init("flut")}
+    public init() { super.init("flut") }
 }
 
 /// STK Mandolin
 public class MandolinString: STKBase {
     /// Initialize the physical model
-    public init() { super.init("mand")}
+    public init() { super.init("mand") }
 }
 
 /// STK Rhodes Piano
 public class RhodesPianoKey: STKBase {
     /// Initialize the physical model
-    public init() { super.init("rhds")}
+    public init() { super.init("rhds") }
 }
 
 /// STK Shaker
 public class Shaker: STKBase {
     /// Initialize the physical model
-    public init() { super.init("shak")}
+    public init() { super.init("shak") }
 }
 
 /// STK Tubular Bells
 public class TubularBells: STKBase {
     /// Initialize the physical model
-    public init() { super.init("tbel")}
+    public init() { super.init("tbel") }
 }
 
-extension Shaker {
+public extension Shaker {
     /// Trigger the sound with a set of parameters
     ///
     /// - Parameters:
     ///   - type: various shaker types are supported
     ///   - amplitude: how hard to shake
-    public func trigger(type: ShakerType, amplitude: Double = 0.5) {
+    func trigger(type: ShakerType, amplitude: Double = 0.5) {
         let velocity = MIDIVelocity(amplitude * 127.0)
         au.trigger(note: type.rawValue, velocity: velocity)
     }
@@ -68,7 +68,6 @@ extension Shaker {
 
 /// Type of shaker to use
 public enum ShakerType: MIDIByte {
-
     /// Maraca
     case maraca = 0
 
@@ -138,4 +137,3 @@ public enum ShakerType: MIDIByte {
     /// Tuned Bamboo Chimes
     case tunedBambooChimes = 22
 }
-

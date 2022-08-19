@@ -1,7 +1,7 @@
-//: Simple Playground to test if STKAudioKit is working 
+//: Simple Playground to test if STKAudioKit is working
 import AudioKit
-import STKAudioKit
 import Foundation
+import STKAudioKit
 
 let shaker = Shaker()
 
@@ -11,7 +11,7 @@ engine.output = shaker
 try! engine.start()
 
 while true {
-    let type = ShakerType(rawValue: (0...22).randomElement()!)!
+    let type = ShakerType(rawValue: (0 ... 22).randomElement()!)!
     print(type)
     shaker.trigger(type: type)
     sleep(1)
