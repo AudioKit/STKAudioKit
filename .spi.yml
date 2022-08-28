@@ -1,5 +1,4 @@
 version: 1
 builder:
   configs:
-    - platform: macos-xcodebuild
-      documentation_targets: [STKAudioKit]
+    - documentation_targets: [STKAudioKit]
