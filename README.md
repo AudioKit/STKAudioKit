@@ -1,5 +1,4 @@
 <div align=center>
-<img src="https://github.com/AudioKit/Cookbook/raw/main/Cookbook/Cookbook/Assets.xcassets/audiokit-icon.imageset/audiokit-icon.png" width="20%"/>
 
 # STK AudioKit
 
@@ -7,6 +6,7 @@
 [![License](https://img.shields.io/github/license/AudioKit/STKAudioKit)](https://github.com/AudioKit/STKAudioKit/blob/main/LICENSE)
 [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 
+<img src="Sources/STKAudioKit/STKAudioKit.docc/Resources/DemoScreenshot.png" alt="node editor demo screenshot">
 </div>
 
 This extension to AudioKit allows you to use physical models from Stanford's [Synthesis Toolkit (STK)](https://ccrma.stanford.edu/software/stk/).
@@ -17,6 +17,7 @@ Install the package using Swift Package Manager.
 
 ## API Reference
 
+* [STKAudioKit](https://www.audiokit.io/STKAudioKit/)
 * [STK Base](https://www.audiokit.io/STKAudioKit/documentation/stkaudiokit/stkbase) - Superclass for STK physical models, do not use directly
 * [Clarinet](https://www.audiokit.io/STKAudioKit/documentation/stkaudiokit/clarinet)
 * [Flute](https://www.audiokit.io/STKAudioKit/documentation/stkaudiokit/flute)
@@ -28,4 +29,4 @@ Install the package using Swift Package Manager.
 
 ## Examples
 
-See the [AudioKit Cookbook](https://github.com/AudioKit/Cookbook/) for examples.
+There's a demo project (screenshot above) and a playground to help you get started.
