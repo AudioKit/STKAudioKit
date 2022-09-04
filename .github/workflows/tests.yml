@@ -45,7 +45,7 @@ jobs:
         uses: AudioKit/ci/.github/actions/build-demo@main
         with:
           project: Demo/STKAudioKitDemo.xcodeproj
-          scheme: ${{ STKAudioKit }}
+          scheme: ${{ 'STKAudioKit' }}
           xcode_version: ${{ matrix.xcode_version }}
 
   # Send notification to Discord on failure.
