@@ -9,12 +9,23 @@ on:
 
 jobs:
   swift_test:
-    name: Test
-    uses: AudioKit/ci/.github/workflows/swift_test.yml@main
-    with:
-      scheme: STKAudioKit
-      platforms: iOS macOS
-      swift-versions: 5.5 5.6
+    strategy:
+      matrix:
+        xcode_version: ['13.1']
+    runs-on: macos-12
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_${{ matrix.xcode_version }}.app
+    steps:
+      - name: Check out STKAudioKit
+        uses: actions/checkout@v2
+      - name: Build STKAudioKit
+        run: |
+          set -euo pipefail
+          xcodebuild -destination 'platform=OS X,arch=x86_64' -scheme STKAudioKit -enableAddressSanitizer YES clean build | xcpretty
+      - name: Run Tests (ASAN)
+        run: |
+          set -euo pipefail
+          xcodebuild -destination 'platform=OS X,arch=x86_64' -scheme STKAudioKit -enableAddressSanitizer YES test | xcpretty
 
   build_demo:
     name: Build ${{ matrix.scheme }} (Xcode ${{ matrix.xcode_version }})
