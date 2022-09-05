@@ -30,4 +30,4 @@ Install the package using Swift Package Manager.
 
 ## Examples
 
-There's a demo project (screenshot above) and a playground to help you get started.
+There's a demo project (video above) and a playground to help you get started.
