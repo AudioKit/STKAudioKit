@@ -6,7 +6,8 @@
 [![License](https://img.shields.io/github/license/AudioKit/STKAudioKit)](https://github.com/AudioKit/STKAudioKit/blob/main/LICENSE)
 [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 
-<img src="Sources/STKAudioKit/STKAudioKit.docc/Resources/DemoScreenshot.png" alt="node editor demo screenshot">
+https://user-images.githubusercontent.com/13122/188519838-936c8aee-b63e-48d1-a76e-1d3de0a98953.mov
+
 </div>
 
 This extension to AudioKit allows you to use physical models from Stanford's [Synthesis Toolkit (STK)](https://ccrma.stanford.edu/software/stk/).
@@ -29,4 +30,4 @@ Install the package using Swift Package Manager.
 
 ## Examples
 
-There's a demo project (screenshot above) and a playground to help you get started.
+There's a demo project (video above) and a playground to help you get started.
