@@ -22,17 +22,3 @@ struct STKAudioKitDemoApp: App {
         }
     }
 }
-
-protocol HasAudioEngine {
-    var engine: AudioEngine { get }
-}
-
-extension HasAudioEngine {
-    func start() {
-        do { try engine.start() } catch let err { Log(err) }
-    }
-
-    func stop() {
-        engine.stop()
-    }
-}
