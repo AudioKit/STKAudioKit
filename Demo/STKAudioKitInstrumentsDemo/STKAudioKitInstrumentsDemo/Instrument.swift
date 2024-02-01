@@ -11,12 +11,21 @@ import Foundation
 enum Instrument: String, Hashable, CaseIterable, Identifiable {
     var id: Self { self }
 
-    case plucked, mandolin, flute
+    case blowHole, brass, clarinet, flute, mandolin, plucked, rhodesPianoKey, sax, shaker, tubularBells, stifKarp, sitar
 
     static var nodes: [Instrument: STKBase] = [
-        .plucked: Plucked(),
+        .blowHole: BlowHole(),
+        .brass: Brass(),
+        .clarinet: Clarinet(),
+        .flute: Flute(),
         .mandolin: MandolinString(),
-        .flute: Flute()
+        .plucked: Plucked(),
+        .rhodesPianoKey: RhodesPianoKey(),
+        .sax: Saxofony(),
+        .shaker: Shaker(),
+        .tubularBells: TubularBells(),
+        .stifKarp: StifKarp(),
+        .sitar: Sitar()
     ]
 
     var node: STKBase {

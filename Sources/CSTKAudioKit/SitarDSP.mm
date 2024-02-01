@@ -3,15 +3,15 @@
 #import "STKInstrumentDSP.h"
 #import "StkBundleHelper.h"
 
-#include "Plucked.h"
+#include "Sitar.h"
 
-class PluckedDSP : public STKInstrumentDSP {
+class SitarDSP : public STKInstrumentDSP {
 private:
-    stk::Plucked *plucked = nullptr;
+    stk::Sitar *sitar = nullptr;
 
 public:
-    PluckedDSP() {}
-    ~PluckedDSP() = default;
+    SitarDSP() {}
+    ~SitarDSP() = default;
 
     void init(int channelCount, double sampleRate) override {
         DSPBase::init(channelCount, sampleRate);
@@ -22,19 +22,19 @@ public:
         stk::Stk::setRawwavePath(directoryURL.fileSystemRepresentation);
 
         stk::Stk::setSampleRate(sampleRate);
-        plucked = new stk::Plucked(/*lowestFrequency*/50);
+        sitar = new stk::Sitar(/*lowestFrequency*/100);
     }
 
     stk::Instrmnt* getInstrument() override {
-        return plucked;
+        return sitar;
     }
 
     void deinit() override {
         DSPBase::deinit();
-        delete plucked;
-        plucked = nullptr;
+        delete sitar;
+        sitar = nullptr;
     }
 
 };
 
-AK_REGISTER_DSP(PluckedDSP, "plck");
+AK_REGISTER_DSP(SitarDSP, "sitr");

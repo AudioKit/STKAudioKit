@@ -3,15 +3,15 @@
 #import "STKInstrumentDSP.h"
 #import "StkBundleHelper.h"
 
-#include "Plucked.h"
+#include "Saxofony.h"
 
-class PluckedDSP : public STKInstrumentDSP {
+class SaxofonyDSP : public STKInstrumentDSP {
 private:
-    stk::Plucked *plucked = nullptr;
+    stk::Saxofony *saxofony = nullptr;
 
 public:
-    PluckedDSP() {}
-    ~PluckedDSP() = default;
+    SaxofonyDSP() {}
+    ~SaxofonyDSP() = default;
 
     void init(int channelCount, double sampleRate) override {
         DSPBase::init(channelCount, sampleRate);
@@ -22,19 +22,19 @@ public:
         stk::Stk::setRawwavePath(directoryURL.fileSystemRepresentation);
 
         stk::Stk::setSampleRate(sampleRate);
-        plucked = new stk::Plucked(/*lowestFrequency*/50);
+        saxofony = new stk::Saxofony(/*lowestFrequency*/100);
     }
 
     stk::Instrmnt* getInstrument() override {
-        return plucked;
+        return saxofony;
     }
 
     void deinit() override {
         DSPBase::deinit();
-        delete plucked;
-        plucked = nullptr;
+        delete saxofony;
+        saxofony = nullptr;
     }
 
 };
 
-AK_REGISTER_DSP(PluckedDSP, "plck");
+AK_REGISTER_DSP(SaxofonyDSP, "saxf");

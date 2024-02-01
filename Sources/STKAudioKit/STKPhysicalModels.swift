@@ -60,6 +60,36 @@ public class TubularBells: STKBase {
     public init() { super.init("tbel") }
 }
 
+/// STK Blow Hole
+public class BlowHole: STKBase {
+    /// Initialize the physical model
+    public init() { super.init("blwh") }
+}
+
+/// STK Saxofony
+public class Saxofony: STKBase {
+    /// Initialize the physical model
+    public init() { super.init("saxf") }
+}
+
+/// STK Brass
+public class Brass: STKBase {
+    /// Initialize the physical model
+    public init() { super.init("bras") }
+}
+
+/// STK StifKarp
+public class StifKarp: STKBase {
+    /// Initialize the physical model
+    public init() { super.init("stif") }
+}
+
+/// STK Sitar
+public class Sitar: STKBase {
+    /// Initialize the physical model
+    public init() { super.init("sitr") }
+}
+
 public extension Shaker {
     /// Trigger the sound with a set of parameters
     ///

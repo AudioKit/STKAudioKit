@@ -3,15 +3,15 @@
 #import "STKInstrumentDSP.h"
 #import "StkBundleHelper.h"
 
-#include "Plucked.h"
+#include "StifKarp.h"
 
-class PluckedDSP : public STKInstrumentDSP {
+class StifKarpDSP : public STKInstrumentDSP {
 private:
-    stk::Plucked *plucked = nullptr;
+    stk::StifKarp *stifKarp = nullptr;
 
 public:
-    PluckedDSP() {}
-    ~PluckedDSP() = default;
+    StifKarpDSP() {}
+    ~StifKarpDSP() = default;
 
     void init(int channelCount, double sampleRate) override {
         DSPBase::init(channelCount, sampleRate);
@@ -22,19 +22,19 @@ public:
         stk::Stk::setRawwavePath(directoryURL.fileSystemRepresentation);
 
         stk::Stk::setSampleRate(sampleRate);
-        plucked = new stk::Plucked(/*lowestFrequency*/50);
+        stifKarp = new stk::StifKarp(/*lowestFrequency*/100);
     }
 
     stk::Instrmnt* getInstrument() override {
-        return plucked;
+        return stifKarp;
     }
 
     void deinit() override {
         DSPBase::deinit();
-        delete plucked;
-        plucked = nullptr;
+        delete stifKarp;
+        stifKarp = nullptr;
     }
 
 };
 
-AK_REGISTER_DSP(PluckedDSP, "plck");
+AK_REGISTER_DSP(StifKarpDSP, "stif");

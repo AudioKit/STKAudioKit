@@ -3,15 +3,15 @@
 #import "STKInstrumentDSP.h"
 #import "StkBundleHelper.h"
 
-#include "Plucked.h"
+#include "BlowHole.h"
 
-class PluckedDSP : public STKInstrumentDSP {
+class BlowHoleDSP : public STKInstrumentDSP {
 private:
-    stk::Plucked *plucked = nullptr;
+    stk::BlowHole *blowHole = nullptr;
 
 public:
-    PluckedDSP() {}
-    ~PluckedDSP() = default;
+    BlowHoleDSP() {}
+    ~BlowHoleDSP() = default;
 
     void init(int channelCount, double sampleRate) override {
         DSPBase::init(channelCount, sampleRate);
@@ -22,19 +22,19 @@ public:
         stk::Stk::setRawwavePath(directoryURL.fileSystemRepresentation);
 
         stk::Stk::setSampleRate(sampleRate);
-        plucked = new stk::Plucked(/*lowestFrequency*/50);
+        blowHole = new stk::BlowHole(/*lowestFrequency*/100);
     }
 
     stk::Instrmnt* getInstrument() override {
-        return plucked;
+        return blowHole;
     }
 
     void deinit() override {
         DSPBase::deinit();
-        delete plucked;
-        plucked = nullptr;
+        delete blowHole;
+        blowHole = nullptr;
     }
 
 };
 
-AK_REGISTER_DSP(PluckedDSP, "plck");
+AK_REGISTER_DSP(BlowHoleDSP, "blwh");
