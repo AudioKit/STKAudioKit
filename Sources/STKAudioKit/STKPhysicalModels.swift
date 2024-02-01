@@ -36,6 +36,12 @@ public class MandolinString: STKBase {
     public init() { super.init("mand") }
 }
 
+/// STK Plucked
+public class Plucked: STKBase {
+    /// Initialize the physical model
+    public init() { super.init("plck") }
+}
+
 /// STK Rhodes Piano
 public class RhodesPianoKey: STKBase {
     /// Initialize the physical model
