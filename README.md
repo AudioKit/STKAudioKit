@@ -2,7 +2,6 @@
 
 # STK AudioKit
 
-[![Build Status](https://github.com/AudioKit/STKAudioKit/workflows/CI/badge.svg)](https://github.com/AudioKit/STKAudioKit/actions?query=workflow%3ACI)
 [![License](https://img.shields.io/github/license/AudioKit/STKAudioKit)](https://github.com/AudioKit/STKAudioKit/blob/main/LICENSE)
 [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 
