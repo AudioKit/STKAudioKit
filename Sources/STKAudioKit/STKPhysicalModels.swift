@@ -36,6 +36,12 @@ public class MandolinString: STKBase {
     public init() { super.init("mand") }
 }
 
+/// STK Plucked
+public class Plucked: STKBase {
+    /// Initialize the physical model
+    public init() { super.init("plck") }
+}
+
 /// STK Rhodes Piano
 public class RhodesPianoKey: STKBase {
     /// Initialize the physical model
@@ -52,6 +58,36 @@ public class Shaker: STKBase {
 public class TubularBells: STKBase {
     /// Initialize the physical model
     public init() { super.init("tbel") }
+}
+
+/// STK Blow Hole
+public class BlowHole: STKBase {
+    /// Initialize the physical model
+    public init() { super.init("blwh") }
+}
+
+/// STK Saxofony
+public class Saxofony: STKBase {
+    /// Initialize the physical model
+    public init() { super.init("saxf") }
+}
+
+/// STK Brass
+public class Brass: STKBase {
+    /// Initialize the physical model
+    public init() { super.init("bras") }
+}
+
+/// STK StifKarp
+public class StifKarp: STKBase {
+    /// Initialize the physical model
+    public init() { super.init("stif") }
+}
+
+/// STK Sitar
+public class Sitar: STKBase {
+    /// Initialize the physical model
+    public init() { super.init("sitr") }
 }
 
 public extension Shaker {
